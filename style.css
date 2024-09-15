@@ -695,7 +695,10 @@ main .container .right {
   display: none;
  }
  main .container .right {
-  display: none;
+  position: static;
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 1rem;
  }
  .customize-theme .card {
   width: 90vw;

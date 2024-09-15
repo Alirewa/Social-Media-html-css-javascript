@@ -1,7 +1,5 @@
 // Sidebar Selecting
 const menuItem = document.querySelectorAll('.menu-item');
-const menuRightSidebarMobile = document.querySelectorAll('.left');
-const menuIconMobile = document.querySelector('.menu-icon-mobile');
 // Messages Selecting
 const messagesNotifications = document.querySelector('#messages-notifications');
 const messages = document.querySelector('.messages');
@@ -37,8 +35,10 @@ menuItem.forEach((item) => {
  });
 });
 // Menu Icon mobile
+const menuRightSidebarMobile = document.querySelectorAll('.sidebar');
+const menuIconMobile = document.querySelector('.menu-icon');
 menuIconMobile.addEventListener('click', () => {
- menuRightSidebarMobile.classList.toggle = 'hidden';
+ menuRightSidebarMobile.classList.remove = 'hidden';
 });
 // Messages
 // search chats

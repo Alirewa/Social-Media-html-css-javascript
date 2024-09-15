@@ -19,7 +19,7 @@
  --border-radius: 2rem;
  --border-card-radius: 1rem;
  --padding-btn: 0.6rem 2rem;
- --padding-search: 0.6rem 1rem;
+ --padding-search: 0.5rem 1rem;
  --padding-card: 1rem;
 
  --sticky-top-left: 5.4rem;
@@ -37,7 +37,21 @@
  list-style: none;
  border: none;
 }
+/* width */
+::-webkit-scrollbar {
+ width: 7px;
+}
 
+/* Track */
+::-webkit-scrollbar-track {
+ background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+ background: var(--color-primary);
+ border-radius: var(--border-card-radius);
+}
 body {
  font-family: 'Poppins', sans-serif;
  color: var(--color-dark);
@@ -59,21 +73,10 @@ body {
  aspect-ratio: 1/1;
  overflow: hidden;
  cursor: pointer;
- position: relative;
  overflow: visible;
 }
 .profile-photo img {
  border-radius: 50%;
-}
-.profile .profile-photo .active {
- width: 0.8rem;
- height: 0.8rem;
- border-radius: 50%;
- border: 3px solid var(--color-white);
- background: var(--color-success);
- position: absolute;
- bottom: 0;
- right: 0;
 }
 img {
  display: block;
@@ -409,6 +412,7 @@ main .container .right {
  display: flex;
  align-items: center;
  justify-content: space-between;
+ padding-bottom: 1rem;
 }
 .right .messages i {
  font-size: 1.4rem;
@@ -678,7 +682,9 @@ main .container .right {
   top: 1.3rem;
   display: block;
  }
-
+ main .container .middle {
+  grid-column: 2/4;
+ }
  main .container .left .sidebar > div h3 {
   display: none;
  }
@@ -688,27 +694,21 @@ main .container .right {
  .customize-theme .card {
   width: 90vw;
  }
- /* main .container .left {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  overflow: hidden;
-  position: fixed;
-  width: 100%;
- } */
  .sidebar {
-  display: none;
   flex-direction: column;
- animation: slide 300 500 0 iteration-count direction fill-mode;
   overflow: hidden;
+  transition: all 300ms ease;
  }
- /* .left {
+ .left {
   position: relative;
   display: block;
   width: 4rem;
   z-index: 5;
- } */
+ }
+ .left .sidebar {
+  margin-top: 0;
+  box-shadow: var(--color-shadow-dark);
+ }
  .menu-icon {
   display: block;
   font-size: 1.4rem;

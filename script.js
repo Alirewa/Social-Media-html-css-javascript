@@ -34,13 +34,15 @@ menuItem.forEach((item) => {
   }
  });
 });
-// Menu Icon mobile
+
 const menuBar = document.querySelector('.sidebar');
 const menuIconMobile = document.querySelector('.menu-icon');
+
+// Menu Icon mobile
 menuIconMobile.addEventListener('click', () => {
- menuBar.style.display = 'block';
- menuBar.style.boxShadow = 'var( --color-shadow-dark)';
+ menuBar.classList.toggle('hidden');
 });
+
 // Messages
 // search chats
 const searchMessage = () => {

@@ -46,9 +46,6 @@ createPostForm.addEventListener('submit', (e) => {
 // Menu Icon mobile Toggle
 const sideBar = document.querySelector('.sidebar');
 const menuIconMobile = document.querySelector('.menu-icon');
-document.addEventListener('DOMContentLoaded', () => {
- sideBar.classList.add('hidden');
-});
 menuIconMobile.addEventListener('click', () => {
  sideBar.classList.toggle('hidden');
 });

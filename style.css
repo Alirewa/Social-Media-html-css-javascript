@@ -644,23 +644,6 @@ main .container .right {
   grid-template-columns: 0 auto 1rem;
   gap: 0;
  }
- main .container .left {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  overflow: hidden;
-  position: fixed;
-  width: 100%;
- }
- .sidebar {
-  display: flex;
-  position: absolute;
-  bottom: 0;
-  align-items: center;
-  justify-content: space-between;
-  overflow: hidden;
- }
  .left .notifications-popup {
   position: absolute;
   left: -20rem;
@@ -677,13 +660,31 @@ main .container .right {
   display: none;
  }
  main .container .middle {
-  grid-column: 1/4;
+  grid-column: 2/4;
  }
  main .container .right {
   display: none;
  }
  .customize-theme .card {
   width: 90vw;
+ }
+ /* main .container .left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+ } */
+ .sidebar {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 0;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
  }
  .left {
   position: relative;

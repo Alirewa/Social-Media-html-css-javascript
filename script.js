@@ -35,10 +35,11 @@ menuItem.forEach((item) => {
  });
 });
 // Menu Icon mobile
-const menuRightSidebarMobile = document.querySelectorAll('.sidebar');
+const menuBar = document.querySelector('.sidebar');
 const menuIconMobile = document.querySelector('.menu-icon');
 menuIconMobile.addEventListener('click', () => {
- menuRightSidebarMobile.classList.remove = 'hidden';
+ menuBar.style.display = 'block';
+ menuBar.style.boxShadow = 'var( --color-shadow-dark)';
 });
 // Messages
 // search chats

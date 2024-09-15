@@ -47,7 +47,7 @@ createPostForm.addEventListener('submit', (e) => {
 const sideBar = document.querySelector('.sidebar');
 const menuIconMobile = document.querySelector('.menu-icon');
 menuIconMobile.addEventListener('click', () => {
- sideBar.classList.toggle('hidden');
+ sideBar.classList.toggle('mobile');
 });
 // search chats
 const searchMessage = () => {

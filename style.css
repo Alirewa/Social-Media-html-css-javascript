@@ -65,6 +65,7 @@ body {
 .hash-tag {
  color: rgb(40, 126, 255);
  font-weight: 500;
+ cursor: pointer;
 }
 
 .profile-photo {
@@ -495,30 +496,35 @@ main .container .right {
 }
 /* Theme Cusomization */
 .customize-theme {
- background: rgba(0, 0, 0, 0.315);
+ background: rgba(0, 0, 0, 0.5);
  width: 100vw;
  height: 100vh;
  position: fixed;
  top: 0;
  left: 0;
- z-index: 100;
+ z-index: 10;
  text-align: center;
- display: grid;
- place-items: center;
+ display: flex;
+ align-items: center;
+ justify-content: center;
  font-size: 0.9rem;
  display: none;
 }
 .customize-theme .card {
+ display: flex;
+ flex-direction: column;
+ overflow: hidden;
+ z-index: 11;
  background: var(--color-white);
- padding: 3rem;
+ padding: 1rem;
  border-radius: var(--border-card-radius);
- width: 50%;
+ width: 100%;
  border: 2px solid var(--color-light);
  box-shadow: var(--color-shadow-dark);
 }
 /* Font Size - theme */
 .customize-theme .font-size {
- margin: 5rem;
+ margin: 1.5rem;
 }
 .customize-theme .font-size > div {
  display: flex;
@@ -550,7 +556,7 @@ main .container .right {
 
 /* color  */
 .customize-theme .color {
- margin-top: 1rem;
+ margin-top: 1.5rem;
 }
 .customize-theme .choose-color {
  background: var(--color-light);
@@ -561,8 +567,8 @@ main .container .right {
  justify-content: space-between;
 }
 .customize-theme .choose-color span {
- width: 2.2rem;
- height: 2.2rem;
+ width: 2rem;
+ height: 2rem;
  border-radius: 50%;
 }
 .customize-theme .choose-color span:nth-child(1) {
@@ -591,14 +597,14 @@ main .container .right {
  display: flex;
  align-items: center;
  justify-content: space-between;
- gap: 1.5rem;
+ gap: 1rem;
 }
 .customize-theme .choose-bg > div {
- padding: var(--padding-card);
+ padding: 0.5rem;
  width: 100%;
  display: flex;
  align-items: center;
- font-size: 1rem;
+ font-size: 0.85rem;
  font-weight: bold;
  border-radius: 0.4rem;
  cursor: pointer;
@@ -611,7 +617,7 @@ main .container .right {
  background-color: var(--color-primary);
 }
 .customize-theme .choose-bg .bg-1 {
- background: var(--color-white);
+ background: white;
  color: black;
 }
 .customize-theme .choose-bg .bg-2 {
@@ -665,14 +671,11 @@ main .container .right {
 /* Media Queries for small tablets and mobile phones */
 
 @media screen and (max-width: 992px) {
- .html {
-  font-size: 10px;
- }
  nav .search-bar {
   display: none;
  }
  main .container {
-  grid-template-columns: 0 auto 1rem;
+  grid-template-columns: 0 auto 0;
   gap: 0;
  }
  .left .notifications-popup {
@@ -686,7 +689,7 @@ main .container .right {
   display: block;
  }
  main .container .middle {
-  grid-column: 1/4;
+  grid-column: 2/4;
  }
  main .container .left .sidebar > div h3 {
   display: none;
@@ -696,12 +699,6 @@ main .container .right {
  }
  .customize-theme .card {
   width: 90vw;
- }
-
- .left {
-  display: block;
-  width: 4rem;
-  z-index: 5;
  }
  .left .sidebar {
   margin-top: 0;

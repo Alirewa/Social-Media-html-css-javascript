@@ -683,7 +683,7 @@ main .container .right {
   display: block;
  }
  main .container .middle {
-  grid-column: 2/4;
+  grid-column: 1/4;
  }
  main .container .left .sidebar > div h3 {
   display: none;

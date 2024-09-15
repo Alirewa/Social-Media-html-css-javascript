@@ -665,6 +665,9 @@ main .container .right {
 /* Media Queries for small tablets and mobile phones */
 
 @media screen and (max-width: 992px) {
+ .html {
+  font-size: 10px;
+ }
  nav .search-bar {
   display: none;
  }

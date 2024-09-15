@@ -16,11 +16,13 @@ const bg1 = document.querySelector('.bg-1');
 const bg2 = document.querySelector('.bg-2');
 const bg3 = document.querySelector('.bg-3');
 
+// Active Item Menu Style
 const changeActiveItem = () => {
  menuItem.forEach((item) => {
   item.classList.remove('active');
  });
 };
+// if Clicked on Notification Item Menu Show Modal
 menuItem.forEach((item) => {
  item.addEventListener('click', (e) => {
   e.preventDefault();
@@ -35,19 +37,22 @@ menuItem.forEach((item) => {
  });
 });
 
+// Form Prevent Default Create Post
+const createPostForm = document.querySelector('.create-post');
+createPostForm.addEventListener('submit', (e) => {
+ e.preventDefault();
+});
+
+// Menu Icon mobile Toggle
 const menuBar = document.querySelector('.sidebar');
 const menuIconMobile = document.querySelector('.menu-icon');
-
-// Menu Icon mobile
 menuIconMobile.addEventListener('click', () => {
  menuBar.classList.toggle('hidden');
 });
 
-// Messages
 // search chats
 const searchMessage = () => {
  const val = messageSearch.value.toLowerCase();
-
  message.forEach((chat) => {
   let name = chat.querySelector('h5').textContent.toLowerCase();
   if (name.indexOf(val) != -1) {
@@ -57,9 +62,8 @@ const searchMessage = () => {
   }
  });
 };
-
-// search chat
 messageSearch.addEventListener('keyup', searchMessage);
+
 // hide count after click and highlight
 messagesNotifications.addEventListener('click', () => {
  messages.style.boxShadow = '0 0 1rem var(--color-primary)';

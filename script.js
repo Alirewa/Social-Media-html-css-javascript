@@ -1,6 +1,7 @@
 // Sidebar Selecting
 const menuItem = document.querySelectorAll('.menu-item');
-
+const menuRightSidebarMobile = document.querySelectorAll('.left');
+const menuIconMobile = document.querySelector('.menu-icon-mobile');
 // Messages Selecting
 const messagesNotifications = document.querySelector('#messages-notifications');
 const messages = document.querySelector('.messages');
@@ -23,7 +24,8 @@ const changeActiveItem = () => {
  });
 };
 menuItem.forEach((item) => {
- item.addEventListener('click', () => {
+ item.addEventListener('click', (e) => {
+  e.preventDefault();
   changeActiveItem();
   item.classList.add('active');
   if (item.id != 'notifications') {
@@ -34,7 +36,10 @@ menuItem.forEach((item) => {
   }
  });
 });
-
+// Menu Icon mobile
+menuIconMobile.addEventListener('click', () => {
+ menuRightSidebarMobile.classList.toggle = 'hidden';
+});
 // Messages
 // search chats
 const searchMessage = () => {
@@ -54,10 +59,10 @@ const searchMessage = () => {
 messageSearch.addEventListener('keyup', searchMessage);
 // hide count after click and highlight
 messagesNotifications.addEventListener('click', () => {
- message.style.boxShadow = '0 0 1rem var(--color-primary)';
+ messages.style.boxShadow = '0 0 1rem var(--color-primary)';
  messagesNotifications.querySelector('.notification-count').style.display = 'none';
  setTimeout(() => {
-  message.style.boxShadow = 'none';
+  messages.style.boxShadow = 'none';
  }, 2000);
 });
 

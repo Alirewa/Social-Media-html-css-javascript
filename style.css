@@ -695,10 +695,14 @@ main .container .right {
   display: none;
  }
  main .container .right {
-  position: static;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 15;
+  width: 100%;
   display: grid;
   grid-template-columns: auto auto;
-  column-gap: 1rem;
+  column-gap: 0.5rem;
  }
  .customize-theme .card {
   width: 90vw;

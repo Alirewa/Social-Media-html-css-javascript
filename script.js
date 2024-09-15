@@ -16,7 +16,7 @@ const bg1 = document.querySelector('.bg-1');
 const bg2 = document.querySelector('.bg-2');
 const bg3 = document.querySelector('.bg-3');
 
-// Active Item Menu Style
+// Active Item Menu
 const changeActiveItem = () => {
  menuItem.forEach((item) => {
   item.classList.remove('active');
@@ -49,7 +49,6 @@ const menuIconMobile = document.querySelector('.menu-icon');
 menuIconMobile.addEventListener('click', () => {
  menuBar.classList.toggle('hidden');
 });
-
 // search chats
 const searchMessage = () => {
  const val = messageSearch.value.toLowerCase();

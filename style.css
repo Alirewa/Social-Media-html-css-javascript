@@ -700,7 +700,7 @@ main .container .right {
 
  .left {
   display: block;
-  width: 3.5rem;
+  width: 4rem;
   z-index: 5;
  }
  .left .sidebar {
